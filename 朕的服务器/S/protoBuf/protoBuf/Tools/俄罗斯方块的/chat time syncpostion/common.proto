@@ -1,0 +1,27 @@
+syntax = "proto3";
+package mygame;
+message  UserData
+{
+	int32 userid = 1;
+	string username = 2;
+	int32 lv = 3;
+	int32 exp = 4;
+	int32 coin = 5; 
+}
+
+
+
+enum ChatType
+{
+	Private =0;
+	Public = 1;
+	
+}
+///代表一个向量 的消息
+message Vec3
+{
+	float x = 1;
+	float y =2;
+	float z = 3;
+
+}

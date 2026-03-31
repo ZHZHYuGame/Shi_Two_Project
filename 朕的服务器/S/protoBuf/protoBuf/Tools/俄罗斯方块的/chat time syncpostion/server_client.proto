@@ -1,0 +1,56 @@
+﻿syntax = "proto3";
+import  "common.proto";
+package mygame;
+///客户端给服务器发的登录消息
+message LoginMsg
+{
+ 	string username = 1;  ///
+	string pwd = 2;     ///密码
+}
+
+//服务器给客户端的登录返回消息
+message LoginReturnMsg
+{
+   bool result = 1; //登录结果
+  UserData self = 2; //自己的信息
+}
+//聊天消息
+message ChatMsg
+{
+ 	string fromName  =1;
+	string  msg =2;
+	string  time  =3;
+	int32  toID  =4;
+	int32  fromID  =5;
+	string  toName = 6;
+	ChatType  chatType   =7;
+}
+
+///好友列表。消息
+message AllOnlineUserMsg
+{
+       repeated UserData  onlineUserList = 1;
+}
+
+///对表包
+message GetServerTimeMsg
+{
+      int64 clientTimeStamp = 1;
+      int64 serverTimeStamp = 2;
+}
+///移动包。
+message StartMoveMsg
+{
+      int32 userid = 1;  	///标识用户  用户id
+      Vec3 targetPos = 2;  	///目标点。
+      Vec3 crtPos = 3;  	 ///当前位置点。
+      float speed = 4; 	///当前速度。
+     int64  serverTime = 6;       ///发消息时候的服务器的时间戳，用于其他客户端收到消息时，计算网络延时。
+}
+///停止包。
+message StopMoveMsg
+{
+      int32 userid = 1;
+      Vec3 crtPos = 3;
+     int64  serverTime = 6;
+}
