@@ -24,6 +24,7 @@ namespace NetBag
         public int MaxBagCount;
         public int NowBagCount;
         public int EndBagCount;
+        public int GetBagCellCount;
         public List<BagGoods> bagList=new List<BagGoods>();
         public List<BagCellData> bagCellList=new List<BagCellData>();
     }

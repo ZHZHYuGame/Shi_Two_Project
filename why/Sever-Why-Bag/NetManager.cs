@@ -56,7 +56,8 @@ namespace NetBag
                     energy = 10000,
                     EndBagCount = 240,
                     MaxBagCount = 100,
-                    NowBagCount = 0
+                    NowBagCount = 0,
+                    GetBagCellCount= 0,
                 }
             };
             UserManager.GetInstance().UserData = c;
