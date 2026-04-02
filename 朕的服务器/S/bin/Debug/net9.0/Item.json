@@ -1,0 +1,104 @@
+[
+  {
+    "id": 10001,
+    "name": "铁剑",
+    "price": 150,
+    "type": "装备",
+    "quality": 2,
+    "icon": "Goods/1150700",
+    "position": 1,
+    "atk": 20
+  },
+  {
+    "id": 10002,
+    "name": "皮甲",
+    "price": 300,
+    "type": "装备",
+    "quality": 2,
+    "icon": "Goods/1101004",
+    "position": 2,
+    "atk": 30
+  },
+  {
+    "id": 10003,
+    "name": "青铜头盔",
+    "price": 200,
+    "type": "装备",
+    "quality": 3,
+    "icon": "Goods/1101003",
+    "position": 3,
+    "atk": 40
+  },
+  {
+    "id": 10004,
+    "name": "力量护腕",
+    "price": 120,
+    "type": "装备",
+    "quality": 2,
+    "icon": "Goods/1000403",
+    "position": 4,
+    "atk": 20
+  },
+  {
+    "id": 10005,
+    "name": "战士长靴",
+    "price": 180,
+    "type": "装备",
+    "quality": 3,
+    "icon": "Goods/1101005",
+    "position": 5,
+    "atk": 40
+  },
+  {
+    "id": 10006,
+    "name": "巨龙项链",
+    "price": 500,
+    "type": "装备",
+    "quality": 4,
+    "icon": "Goods/1000401",
+    "position": 6,
+    "atk": 70
+  },
+  {
+    "id": 10007,
+    "name": "勇者之戒",
+    "price": 400,
+    "type": "装备",
+    "quality": 4,
+    "icon": "Goods/1000502",
+    "position": 0,
+    "atk": 100
+  },
+  {
+    "id": 20001,
+    "name": "小瓶治疗药水",
+    "price": 50,
+    "type": "药品",
+    "quality": 1,
+    "icon": "Goods/1001"
+  },
+  {
+    "id": 20002,
+    "name": "大瓶治疗药水",
+    "price": 150,
+    "type": "药品",
+    "quality": 2,
+    "icon": "Goods/21102"
+  },
+  {
+    "id": 20003,
+    "name": "魔力药剂",
+    "price": 120,
+    "type": "药品",
+    "quality": 2,
+    "icon": "Goods/25002"
+  },
+  {
+    "id": 20004,
+    "name": "高级恢复药水",
+    "price": 300,
+    "type": "药品",
+    "quality": 3,
+    "icon": "Goods/21104"
+  }
+]
