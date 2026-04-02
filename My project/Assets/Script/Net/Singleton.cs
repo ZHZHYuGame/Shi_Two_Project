@@ -7,5 +7,5 @@ public class Singleton<T> where T : class, new()
 {
     static readonly Lazy<T> lazy = new Lazy<T>(() => new T());
     
-    static T Ins => lazy.Value;
+    public static T Ins => lazy.Value;
 }

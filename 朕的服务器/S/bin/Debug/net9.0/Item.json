@@ -100,5 +100,75 @@
     "type": "药品",
     "quality": 3,
     "icon": "Goods/21104"
+  },
+  {
+    "id": 10008,
+    "name": "破损的木剑",
+    "price": 50,
+    "type": "装备",
+    "quality": 1,
+    "icon": "Goods/1200500",
+    "position": 1,
+    "atk": 5
+  },
+  {
+    "id": 10009,
+    "name": "皮革手套",
+    "price": 60,
+    "type": "装备",
+    "quality": 1,
+    "icon": "Goods/1000603",
+    "position": 4,
+    "atk": 8
+  },
+  {
+    "id": 10010,
+    "name": "王者之冠",
+    "price": 1000,
+    "type": "装备",
+    "quality": 5,
+    "icon": "Goods/1100803",
+    "position": 3,
+    "atk": 120
+  },
+  {
+    "id": 10011,
+    "name": "神速之靴",
+    "price": 600,
+    "type": "装备",
+    "quality": 5,
+    "icon": "Goods/1200905",
+    "position": 5,
+    "atk": 80
+  },
+  {
+    "id": 10012,
+    "name": "大地护符",
+    "price": 450,
+    "type": "装备",
+    "quality": 4,
+    "icon": "Goods/1000101",
+    "position": 6,
+    "atk": 90
+  },
+  {
+    "id": 10013,
+    "name": "甲甲甲",
+    "price": 200,
+    "type": "装备",
+    "quality": 3,
+    "icon": "Goods/1100404",
+    "position": 2,
+    "atk": 45
+  },
+  {
+    "id": 10014,
+    "name": "轻盈短剑",
+    "price": 100,
+    "type": "装备",
+    "quality": 2,
+    "icon": "Goods/1001002",
+    "position": 0,
+    "atk": 25
   }
 ]

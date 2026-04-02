@@ -55,24 +55,31 @@
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/WireFormat.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/IMessage.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/Properties/AssemblyInfo.cs" />
+    <Compile Include="Assets/Script/Game/GameManager.cs" />
     <Compile Include="Assets/Script/Net/MessageCenter.cs" />
+    <Compile Include="Assets/Script/Game/UserManager.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/CodedInputStream.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/MessageParser.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/Collections/ReadOnlyDictionary.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/ICustomDiagnosticMessage.cs" />
+    <Compile Include="Assets/Script/Game/TipsPanel.cs" />
+    <Compile Include="Assets/Script/Game/BagManager.cs" />
     <Compile Include="Assets/Script/Net/lib/lib/zlib_NET_104/StaticTree.cs" />
     <Compile Include="Assets/Resources/Player/1/cd.cs" />
     <Compile Include="Assets/Script/Net/lib/lib/zlib_NET_104/Deflate.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/Compatibility/PropertyInfoExtensions.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/InvalidProtocolBufferException.cs" />
     <Compile Include="Assets/Script/Net/lib/lib/zlib_NET_104/Tree.cs" />
+    <Compile Include="Assets/Script/Game/RawImg.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/MessageExtensions.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/Compatibility/StreamExtensions.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Tools/俄罗斯方块的/ServerClient.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/Collections/MapField.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/IDeepCloneable.cs" />
     <Compile Include="Assets/Script/Net/lib/lib/zlib_NET_104/ZOutputStream.cs" />
+    <Compile Include="Assets/Script/Game/EqCell.cs" />
     <Compile Include="Assets/Script/Net/lib/lib/zlib_NET_104/ZStream.cs" />
+    <Compile Include="Assets/Script/Game/BagCell.cs" />
     <Compile Include="Assets/Script/Net/lib/lib/zlib_NET_104/Adler32.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/CodedOutputStream.ComputeSize.cs" />
     <Compile Include="Assets/Script/Net/lib/lib/MyMemoryStream.cs" />
@@ -80,7 +87,7 @@
     <Compile Include="Assets/Script/Net/NetID.cs" />
     <Compile Include="Assets/Resources/Player/1/move.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/ByteString.cs" />
-    <Compile Include="Assets/Script/UI/GameManager.cs" />
+    <Compile Include="Assets/Script/Game/ConfigManager.cs" />
     <Compile Include="Assets/Script/Net/lib/lib/zlib_NET_104/SupportClass.cs" />
     <Compile Include="Assets/Script/Net/Singleton.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/LimitedInputStream.cs" />
@@ -93,6 +100,8 @@
     <Compile Include="Assets/Script/Net/lib/lib/ZlibHelper.cs" />
     <Compile Include="Assets/Script/Net/lib/lib/zlib_NET_104/Zlib.cs" />
     <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Protobuf/ProtoPreconditions.cs" />
+    <Compile Include="Assets/Script/Net/protoBuf/protoBuf/Tools/Bag.cs" />
+    <None Include="Assets/Resources/Item.json" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.62f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -347,6 +356,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>/Users/yuyao/Shi_Two_Project/hml/My project/Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>/Users/yuyao/Shi_Two_Project/hml/My project/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.2/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.62f1c1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
@@ -797,6 +809,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>/Users/yuyao/Shi_Two_Project/hml/My project/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Apis">
+      <HintPath>/Users/yuyao/Shi_Two_Project/hml/My project/Library/ScriptAssemblies/Unity.Services.Apis.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

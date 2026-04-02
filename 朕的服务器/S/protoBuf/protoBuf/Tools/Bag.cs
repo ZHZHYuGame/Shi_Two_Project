@@ -9,6 +9,11 @@ using scg = global::System.Collections.Generic;
 namespace Game {
 
   #region Enums
+  public enum ResultType {
+    Yes = 0,
+    No = 1,
+  }
+
   public enum EqPositionType {
     /// <summary>
     /// 戒指
@@ -43,6 +48,155 @@ namespace Game {
   #endregion
 
   #region Messages
+  public sealed class C_To_S_Wear_Eq_Message : pb::IMessage {
+    private static readonly pb::MessageParser<C_To_S_Wear_Eq_Message> _parser = new pb::MessageParser<C_To_S_Wear_Eq_Message>(() => new C_To_S_Wear_Eq_Message());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<C_To_S_Wear_Eq_Message> Parser { get { return _parser; } }
+
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 1;
+    private global::Game.BagData data_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Game.BagData Data {
+      get { return data_; }
+      set {
+        data_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private string type_ = "";
+    /// <summary>
+    /// 当前是什么类型背包
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Type {
+      get { return type_; }
+      set {
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (data_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Data);
+      }
+      if (Type.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (data_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
+      }
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (data_ == null) {
+              data_ = new global::Game.BagData();
+            }
+            input.ReadMessage(data_);
+            break;
+          }
+          case 18: {
+            Type = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed class S_To_C_Wear_Eq_Message : pb::IMessage {
+    private static readonly pb::MessageParser<S_To_C_Wear_Eq_Message> _parser = new pb::MessageParser<S_To_C_Wear_Eq_Message>(() => new S_To_C_Wear_Eq_Message());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<S_To_C_Wear_Eq_Message> Parser { get { return _parser; } }
+
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 1;
+    private global::Game.ResultType result_ = 0;
+    /// <summary>
+    ///结果  有结果就返回下面的集合  没有结果就不反回了直接打印不能穿戴
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Game.ResultType Result {
+      get { return result_; }
+      set {
+        result_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "itemList" field.</summary>
+    public const int ItemListFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Game.Item> _repeated_itemList_codec
+        = pb::FieldCodec.ForMessage(18, global::Game.Item.Parser);
+    private readonly pbc::RepeatedField<global::Game.Item> itemList_ = new pbc::RepeatedField<global::Game.Item>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Game.Item> ItemList {
+      get { return itemList_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Result != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Result);
+      }
+      itemList_.WriteTo(output, _repeated_itemList_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Result != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      }
+      size += itemList_.CalculateSize(_repeated_itemList_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            result_ = (global::Game.ResultType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            itemList_.AddEntriesFrom(input, _repeated_itemList_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed class S_To_C_Remove_Bag_Message : pb::IMessage {
     private static readonly pb::MessageParser<S_To_C_Remove_Bag_Message> _parser = new pb::MessageParser<S_To_C_Remove_Bag_Message>(() => new S_To_C_Remove_Bag_Message());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -484,6 +638,17 @@ namespace Game {
       }
     }
 
+    /// <summary>Field number for the "allIndex" field.</summary>
+    public const int AllIndexFieldNumber = 4;
+    private int allIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AllIndex {
+      get { return allIndex_; }
+      set {
+        allIndex_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (item_ != null) {
@@ -498,6 +663,10 @@ namespace Game {
         output.WriteRawTag(24);
         output.WriteInt32(Index);
       }
+      if (AllIndex != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AllIndex);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -511,6 +680,9 @@ namespace Game {
       }
       if (Index != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (AllIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AllIndex);
       }
       return size;
     }
@@ -536,6 +708,10 @@ namespace Game {
           }
           case 24: {
             Index = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            AllIndex = input.ReadInt32();
             break;
           }
         }

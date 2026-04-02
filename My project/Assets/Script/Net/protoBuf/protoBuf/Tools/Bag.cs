@@ -135,6 +135,9 @@ namespace Game {
     /// <summary>Field number for the "result" field.</summary>
     public const int ResultFieldNumber = 1;
     private global::Game.ResultType result_ = 0;
+    /// <summary>
+    ///结果  有结果就返回下面的集合  没有结果就不反回了直接打印不能穿戴
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Game.ResultType Result {
       get { return result_; }
@@ -143,15 +146,14 @@ namespace Game {
       }
     }
 
-    /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 2;
-    private int index_;
+    /// <summary>Field number for the "itemList" field.</summary>
+    public const int ItemListFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Game.Item> _repeated_itemList_codec
+        = pb::FieldCodec.ForMessage(18, global::Game.Item.Parser);
+    private readonly pbc::RepeatedField<global::Game.Item> itemList_ = new pbc::RepeatedField<global::Game.Item>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Index {
-      get { return index_; }
-      set {
-        index_ = value;
-      }
+    public pbc::RepeatedField<global::Game.Item> ItemList {
+      get { return itemList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -160,10 +162,7 @@ namespace Game {
         output.WriteRawTag(8);
         output.WriteEnum((int) Result);
       }
-      if (Index != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Index);
-      }
+      itemList_.WriteTo(output, _repeated_itemList_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -172,9 +171,7 @@ namespace Game {
       if (Result != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
       }
-      if (Index != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
-      }
+      size += itemList_.CalculateSize(_repeated_itemList_codec);
       return size;
     }
 
@@ -190,8 +187,8 @@ namespace Game {
             result_ = (global::Game.ResultType) input.ReadEnum();
             break;
           }
-          case 16: {
-            Index = input.ReadInt32();
+          case 18: {
+            itemList_.AddEntriesFrom(input, _repeated_itemList_codec);
             break;
           }
         }
@@ -641,6 +638,17 @@ namespace Game {
       }
     }
 
+    /// <summary>Field number for the "allIndex" field.</summary>
+    public const int AllIndexFieldNumber = 4;
+    private int allIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AllIndex {
+      get { return allIndex_; }
+      set {
+        allIndex_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (item_ != null) {
@@ -655,6 +663,10 @@ namespace Game {
         output.WriteRawTag(24);
         output.WriteInt32(Index);
       }
+      if (AllIndex != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AllIndex);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -668,6 +680,9 @@ namespace Game {
       }
       if (Index != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (AllIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AllIndex);
       }
       return size;
     }
@@ -693,6 +708,10 @@ namespace Game {
           }
           case 24: {
             Index = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            AllIndex = input.ReadInt32();
             break;
           }
         }

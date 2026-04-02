@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NetID : MonoBehaviour
+public class NetID 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // 获取端口号
+    public const int C_To_S_Get_User_Port_Message = 1001;
+    public const int S_To_C_Get_User_Port_Message = 1002;
+    // 获取背包数据
+    public const int C_To_S_Get_Bag_Data_Message = 1003;
+    public const int S_To_C_Get_Bag_Data_Message = 1004;
+    // 穿戴背包数据
+    public const int C_To_S_Wear_Eq_Message = 1005;
+    public const int S_To_C_Wear_Eq_Message = 1006;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

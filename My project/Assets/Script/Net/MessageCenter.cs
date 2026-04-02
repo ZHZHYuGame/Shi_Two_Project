@@ -1,18 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MessageCenter : MonoBehaviour
+public class MessageCenter:Singleton<MessageCenter>
 {
-    // Start is called before the first frame update
-    void Start()
+    private Dictionary<int, Action<object>> dic = new();
+
+    public void BroadCast(int id,params object[] args)
     {
-        
+        if (dic.ContainsKey(id))
+        {
+            dic[id](args);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void AddListener(int id, Action<object> call)
     {
-        
+        if (!dic.ContainsKey(id))
+        {
+            dic.Add(id, call);
+        }
     }
 }

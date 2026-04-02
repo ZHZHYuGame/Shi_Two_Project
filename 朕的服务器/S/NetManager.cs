@@ -12,9 +12,10 @@ public class NetManager : Singleton<NetManager>
     public void Start()
     {
         st = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        st.Bind(new IPEndPoint(IPAddress.Any, 10000));
+        st.Bind(new IPEndPoint(IPAddress.Any, 22222));
         st.Listen(10);
         st.BeginAccept(AcceptHandle,null);
+        Console.WriteLine("服务器启动");
     }
 
     private void AcceptHandle(IAsyncResult ar)
@@ -27,8 +28,10 @@ public class NetManager : Singleton<NetManager>
         client.ip = IPE.Address.ToString();
         client.port = IPE.Port;
         UserManager.Ins.Add(client);
+        Console.WriteLine(client.port + "链接到服务器");
         
         clientSt.BeginReceive(bufferByte, 0, bufferByte.Length, SocketFlags.None, ReceiveHandle, client);
+        st.BeginAccept(AcceptHandle,null);
     }
 
     private void ReceiveHandle(IAsyncResult ar)
@@ -58,8 +61,6 @@ public class NetManager : Singleton<NetManager>
                         byte[] data = new byte[dataLen - 4];
                         Buffer.BlockCopy(idData, 4, data, 0, dataLen - 4);
                         MessageCenter.Ins.BroadCast(id,clientSt,data);
-
-
                         var surplusLen = (int)myStream.Length - allLen;
                         if (surplusLen > 0)
                         {
@@ -68,7 +69,6 @@ public class NetManager : Singleton<NetManager>
                             myStream.Position = 0;
                             myStream.SetLength(0);
                             myStream.Write(surplus, 0, surplus.Length);
-                            break;
                         }
                         else
                         {
@@ -100,6 +100,7 @@ public class NetManager : Singleton<NetManager>
         Buffer.BlockCopy(idData, 0, allData, 0, idData.Length);
         Buffer.BlockCopy(data, 0, allData, idData.Length, data.Length);
         byte[] realData = MakeCountData(allData);
+        Console.WriteLine("消息id"+id);
         s.BeginSend(realData,0,realData.Length,SocketFlags.None,SendHandle,s);
     }
 
