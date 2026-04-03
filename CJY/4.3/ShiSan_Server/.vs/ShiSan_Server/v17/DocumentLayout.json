@@ -1,0 +1,203 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\bagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:bagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\net\\netmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:net\\netmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\messagecontroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:messagecontroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|c:\\users\\asus\\downloads\\shisan_server (1)\\shisan_server\\configmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:configmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\net\\message\\bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:net\\message\\bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\net\\netid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{731EE0D8-7E6B-4A9F-B80F-205D9ACAB4AD}|ShiSan_Server.csproj|solutionrelative:net\\netid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConfigManager.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\ConfigManager.cs",
+              "RelativeDocumentMoniker": "ConfigManager.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\ConfigManager.cs",
+              "RelativeToolTip": "ConfigManager.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAADwvyQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T03:06:52.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Bag.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\Net\\Message\\Bag.cs",
+              "RelativeDocumentMoniker": "Net\\Message\\Bag.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\Net\\Message\\Bag.cs",
+              "RelativeToolTip": "Net\\Message\\Bag.cs",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAEwBMBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T01:37:37.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShopManager.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\ShopManager.cs",
+              "RelativeDocumentMoniker": "ShopManager.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\ShopManager.cs",
+              "RelativeToolTip": "ShopManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADkAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T10:55:10.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserManager.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\UserManager.cs",
+              "RelativeDocumentMoniker": "UserManager.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\UserManager.cs",
+              "RelativeToolTip": "UserManager.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAswBEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T05:27:43.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MessageControll.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\MessageControll.cs",
+              "RelativeDocumentMoniker": "MessageControll.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\MessageControll.cs",
+              "RelativeToolTip": "MessageControll.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T06:27:36.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChatManager.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\ChatManager.cs",
+              "RelativeDocumentMoniker": "ChatManager.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\ChatManager.cs",
+              "RelativeToolTip": "ChatManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T10:55:25.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NetID.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\Net\\NetID.cs",
+              "RelativeDocumentMoniker": "Net\\NetID.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\Net\\NetID.cs",
+              "RelativeToolTip": "Net\\NetID.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T11:23:26.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NetManager.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\Net\\NetManager.cs",
+              "RelativeDocumentMoniker": "Net\\NetManager.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\Net\\NetManager.cs",
+              "RelativeToolTip": "Net\\NetManager.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAIAxwJAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T10:36:00.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BagManager.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\BagManager.cs",
+              "RelativeDocumentMoniker": "BagManager.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\BagManager.cs",
+              "RelativeToolTip": "BagManager.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAwwCYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T11:03:38.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\Client.cs",
+              "RelativeDocumentMoniker": "Client.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\Client.cs",
+              "RelativeToolTip": "Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T05:15:56.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\ShiSan_Server (1)\\ShiSan_Server\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T11:26:33.042Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
