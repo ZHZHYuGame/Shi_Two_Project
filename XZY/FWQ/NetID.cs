@@ -40,5 +40,13 @@ namespace FWQ
         /// 领取全部邮件
         /// </summary>
         public static int S_2_CGetAllMail = 1008;
+        /// <summary>
+        /// 添加邮件
+        /// </summary>
+        public static int S_2_CAddMail = 1009;
+        /// <summary>
+        /// 添加失败服务器返回
+        /// </summary>
+        public static int S_2_CAddlose = 1010;
     }
 }

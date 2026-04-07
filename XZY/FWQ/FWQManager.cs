@@ -74,8 +74,8 @@ public class FWQManager
 
     private void clientReceiveHandle(IAsyncResult ar)
     {
-        try
-        {
+      /*  try
+        {*/
             
             Client client=ar.AsyncState as Client;
             Socket clientSocket = client.st;
@@ -121,12 +121,12 @@ public class FWQManager
                 buffer=buffer.Slice(shor-4);
             }
             clientSocket.BeginReceive(receiveDataByte, 0, receiveDataByte.Length, SocketFlags.None, clientReceiveHandle, client);
-        }
+      /*  }
         catch(Exception)
         {
             //异常捕捉
             Console.WriteLine("服务器数据解析异常");
-        }
+        }*/
     }
 
     public void SendNetMessage(Socket st,int id, byte[] data)

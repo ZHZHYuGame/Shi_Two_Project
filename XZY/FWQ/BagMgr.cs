@@ -43,47 +43,136 @@ namespace FWQ
         }
 
         //背包添加数据
-        public void AddBag(Client C, List<Item> list)
+        public void AddBag(Client C, List<Item> list,out bool Iss)
         {
-
+            bool Is= IsAddBag(C, list);
+            if (!Is)
+            {
+                Iss = false;
+                return;
+            }
+            foreach (var item in list)
+            {
+                if(item.type==0)
+                {
+                    foreach (var item2 in Dic[C])
+                    {
+                        if(item2.Item==null)
+                        {
+                            continue;
+                        }
+                        if (item2.Item.id == item.id&&item2.Count+1<=MaxNum)
+                        {
+                            item2.Count++;
+                            Iss = true;
+                            goto a;
+                        }
+                    }
+                    foreach (var item2 in Dic[C])
+                    {
+                        if (item2.Item == null)
+                        {
+                            item2.Item = item;
+                            item2.Count = 1;
+                            break;
+                        }
+                    }
+                a:;
+                   }
+                    else
+                    {
+                        foreach(var item2 in Dic[C])
+                         {
+                            if (item2.Item == null)
+                            {
+                               item2.Item= item;
+                               item2.Count = 1;
+                            break;
+                            }
+                         }
+                    }
+            }
+            Iss = true;
+            S_C(C);
 
         }
         //判断背包是否能够添加这些数据
-        /*public bool IsAddBag(Client C, List<Item> list)
+        public bool IsAddBag(Client C, List<Item> list)
         {
             int count = 0;
             foreach (var item in Dic[C])
             {
-                if(item.Item==null)
+                if (item.Item == null)
                 {
                     count++;
                 }
             }
-            if (count<list.Count)
+            if (count < list.Count)
             {
-                List<BagCellData> templist = Dic[C];
-                int DJCount = 0;
-                foreach (var item in templist)
+                //存放所有能叠加的消耗品格子
+                List<BagCellData> templist =new List<BagCellData>();
+                foreach(var item in Dic[C])
                 {
-                    if (item.Item==null||item.Item.type == 1)
+                    if(item.Item==null)
                     {
                         continue;
                     }
-                    foreach (var items in list)
+                    if(item.Item.type==0&&item.Count<MaxNum)
                     {
-                        if(items.id==item.Item.id&&item.Count<=MaxNum)
+                        templist.Add(item);
+                    }
+                }
+                List<Item> templist2 = new List<Item>();
+                int Count = 0;
+                foreach (var item in list)
+                {
+                    if (item.type == 0)
+                    {
+                        bool Is=false;
+                        foreach(var item2 in templist2)
                         {
-                            item.Count++;
-                            DJCount++;
+                            if(item2.id==item.id)
+                            {
+                                item2.count++;
+                                Is = true;
+                                Count++;
+                                break;
+                            }
+                        }
+                        if(!Is)
+                        {
+                            item.count = 1;
+                            templist2.Add(item);    
                         }
                     }
                 }
+               
+                foreach(var item in templist)
+                {
+                    foreach(var item2 in templist2)
+                    {
+                        if(item.Item.id==item2.id&&item.Count+item2.count<=MaxNum)
+                        {
+                            Count++;
+                            break;
+                        }
+                    }
+                }
+                if (count + Count < list.Count)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+               
             }
             else
             {
                 return true;
             }
-        }*/
+        }
         //发送客户端方法
         public void S_C(Client C)
         {

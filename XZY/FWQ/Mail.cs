@@ -39,8 +39,79 @@ namespace FWQ
             MessageControll.Instance().AddListener(NetID.S_2_CDelMail,DelMail);
             MessageControll.Instance().AddListener(NetID.S_2_CGetAllMail,GetAllMail);
             MessageControll.Instance().AddListener(NetID.S_2_CDelAllMail,DelAllMail);
+            MessageControll.Instance().AddListener(NetID.S_2_CAddMail,AddMail);
 
         }
+        /// <summary>
+        /// 添加一个邮件
+        /// </summary>
+        /// <param name="obj"></param>
+
+        private void AddMail(object obj)
+        {
+            object[] Obj = obj as object[];
+            Client C = Obj[1] as Client;
+            int Int = BitConverter.ToInt32(Obj[0] as byte[]);
+            YJ temp = ConfigMgr.Instance().YJList[Int-1];
+            YJ Temp = new YJ()
+            {
+                isAward = temp.isAward,
+                content = temp.content,
+                emailID = temp.emailID,
+                Time = temp.Time,
+                title = temp.title,
+            };
+            Temp.StartTime =DateTime.Now;
+            Temp.awardList = new List<Item>();
+            if (Temp.isAward)
+            {
+                
+                Random random = new Random();
+                for (int i = 0; i < random.Next(1, 4); i++)
+                {
+                    Temp.awardList.Add(ConfigMgr.Instance().ItemList[random.Next(ConfigMgr.Instance().ItemList.Count)]);
+                }
+            }
+            YJBase Temp2 = new YJBase()
+            {
+                YJID = ID++,
+                Is = false,
+                YJ = Temp
+            };
+            Dic[C].Add(Temp2);
+            FWQManager.Instance().SendNetMessage(C.st, NetID.S_2_CGame, GetBytes(C));
+        }
+        public void AddMail(Client C,int Int)
+        {
+            YJ temp = ConfigMgr.Instance().YJList[Int-1];
+            YJ Temp = new YJ()
+            {
+                isAward = temp.isAward,
+                content = temp.content,
+                emailID = temp.emailID,
+                Time = temp.Time,
+                title = temp.title,
+            };
+            Temp.StartTime = DateTime.Now;
+            Temp.awardList = new List<Item>();
+            if (Temp.isAward)
+            {
+                
+                Random random = new Random();
+                for (int i = 0; i < random.Next(1, 4); i++)
+                {
+                    Temp.awardList.Add(ConfigMgr.Instance().ItemList[random.Next(ConfigMgr.Instance().ItemList.Count)]);
+                }
+            }
+            YJBase Temp2 = new YJBase()
+            {
+                YJID = ID++,
+                Is = false,
+                YJ = Temp
+            };
+            Dic[C].Add(Temp2);
+        }
+
         /// <summary>
         /// 删除所有无附件且已读的邮件
         /// </summary>
@@ -48,7 +119,23 @@ namespace FWQ
         /// <exception cref="NotImplementedException"></exception>
         private void DelAllMail(object obj)
         {
-            
+            object[] Obj = obj as object[];
+            Client C = Obj[1] as Client;
+            int count = 0;
+            foreach (var item in Dic[C].ToList())
+            {
+                count++;
+                if (count > 50)
+                {
+                    break;
+                }
+                if ((!item.YJ.isAward)&&item.Is)
+                {
+                    Dic[C].Remove(item);
+                    
+                }
+            }
+            FWQManager.Instance().SendNetMessage(C.st, NetID.S_2_CGame, GetBytes(C));
         }
         /// <summary>
         /// 领取所有有附件的邮件
@@ -57,7 +144,44 @@ namespace FWQ
         /// <exception cref="NotImplementedException"></exception>
         private void GetAllMail(object obj)
         {
-            
+            object[] Obj = obj as object[];
+            Client C = Obj[1] as Client;
+            int count = 0;
+            int Iscount = 0;
+            bool Iss=false;
+            foreach (var item in Dic[C].ToList())
+            {
+                count++;
+                if(count>50)
+                {
+                    break;
+                }
+                    if(!item.YJ.isAward)
+                    {
+                       item.Is = true; 
+                        continue;
+                    }
+                    BagMgr.instance.AddBag(C, item.YJ.awardList, out bool Is);
+                    if (Is)
+                    {
+                        item.Is = true;
+                       // Console.WriteLine("领取邮件成功");
+                        item.YJ.isAward = false;
+                    Iscount++;
+                       
+                    }
+                    else
+                    {
+                        Iss = true;
+                       // Console.WriteLine("领取邮件失败");
+                    }
+                    
+            }
+            if(Iscount<=0&&Iss)
+            {
+                FWQManager.Instance().SendNetMessage(C.st, NetID.S_2_CAddlose, BitConverter.GetBytes(true));
+            }
+            FWQManager.Instance().SendNetMessage(C.st, NetID.S_2_CGame, GetBytes(C));
         }
         /// <summary>
         /// 删除一个邮件
@@ -88,6 +212,26 @@ namespace FWQ
             object[] Obj = obj as object[];
             Client C = Obj[1] as Client;
             int Int = BitConverter.ToInt32(Obj[0] as byte[]);
+            foreach(var item in Dic[C])
+            {
+                if(item.YJID==Int)
+                {
+                    BagMgr.instance.AddBag(C,item.YJ.awardList, out bool Is);
+                    if(Is)
+                    {
+                       // Console.WriteLine("领取邮件成功");
+                        item.YJ.isAward = false;
+                        FWQManager.Instance().SendNetMessage(C.st, NetID.S_2_CGame, GetBytes(C));
+                    }
+                    else
+                    {
+                       // Console.WriteLine("领取邮件失败");
+                        FWQManager.Instance().SendNetMessage(C.st, NetID.S_2_CAddlose,BitConverter.GetBytes(true));
+                    }
+                    break;
+                }
+            }
+            
         }
 
         /// <summary>
@@ -139,30 +283,9 @@ namespace FWQ
         public void Start(Client C)
         {
             Dic.Add(C, new List<YJBase>());
-            YJ A = ConfigMgr.Instance().YJList[0];
-            A.StartTime = DateTime.Now;
-            YJBase A2 = new YJBase()
-            {
-                YJID = ID++,
-                Is = false,
-                YJ = A
-            };
-            Dic[C].Add(A2);
-            YJ Temp = ConfigMgr.Instance().YJList[1];
-            Temp.StartTime = A.StartTime;
-            Temp.awardList = new List<Item>();
-            Random random = new Random();
-            for(int i=0;i<random.Next(1,3); i++)
-            {
-                Temp.awardList.Add(ConfigMgr.Instance().ItemList[random.Next(ConfigMgr.Instance().ItemList.Count)]);
-            }
-            YJBase Temp2 = new YJBase()
-            {
-                YJID = ID++,
-                Is = false,
-                YJ = Temp
-            };
-            Dic[C].Add(Temp2);
+            AddMail(C, 1);
+            AddMail(C, 2);
+            Dic[C][1].YJ.StartTime = Dic[C][0].YJ.StartTime;
             Console.WriteLine($"客户端{C.port}已登录,发送初始数据");
             FWQManager.Instance().SendNetMessage(C.st, NetID.S_2_CGame, GetBytes(C));
         }
@@ -225,11 +348,11 @@ namespace FWQ
                 {
                     if(temp>new TimeSpan())
                     {
-                        return -1;
+                        return 1;
                     }
                     else
                     {
-                        return 1;
+                        return -1;
                     }
                 }
             });

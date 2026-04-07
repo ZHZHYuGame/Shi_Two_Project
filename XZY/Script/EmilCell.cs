@@ -36,7 +36,9 @@ public class EmilCell : MonoBehaviour
         Btn.onClick.AddListener(() =>
         {
             NetManager.Instance().SendNetMessage(NetID.S_2_COpenMail,BitConverter.GetBytes(item.MailID));
+            ThreePanel.Instance.GetData();
             ThreePanel.Instance.GetData(item);
+            
         });
         
     }

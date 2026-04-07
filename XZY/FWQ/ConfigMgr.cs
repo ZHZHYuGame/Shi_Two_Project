@@ -9,6 +9,7 @@ public class Item
     public string des;
     public int type;
     public string path;
+    public int count;
 }
 public class YJ
 {

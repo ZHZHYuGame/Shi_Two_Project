@@ -11,6 +11,7 @@ public class ThreePanel : MonoBehaviour
     public Button CloseBtn,GetBtn;
     public Transform CellBase,FJ;
     public static ThreePanel Instance;
+    public MailData Mail;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class ThreePanel : MonoBehaviour
             NetManager.Instance().SendNetMessage(NetID.S_2_CSXMail);
         });
         gameObject.SetActive(false);
+      
     }
 
     // Update is called once per frame
@@ -33,9 +35,15 @@ public class ThreePanel : MonoBehaviour
         
     }
 
-    public void GetData(MailData item)
+    public void GetData()
     {
         gameObject.SetActive(true);
+    }
+    public void GetData(MailData item)
+    {
+        Mail = item;
+        GetBtn.onClick.RemoveAllListeners();
+        
         ZT.text = item.Data.Title;
         Des.text = item.Data.Content;
         if (item.Data.IsAward)
@@ -68,6 +76,7 @@ public class ThreePanel : MonoBehaviour
                 NetManager.Instance().SendNetMessage(NetID.S_2_CGetMail,BitConverter.GetBytes(item.MailID));
             }
         });
+    
     }
 
     public void GetUIFJ(MailData item,bool Is)

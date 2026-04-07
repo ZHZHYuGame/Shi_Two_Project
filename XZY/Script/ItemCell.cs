@@ -8,6 +8,7 @@ public class ItemCell : MonoBehaviour
     public Image icon;
     public Text text;
     public GameObject Game;
+    public Button Btn;
     void Start()
     {
         
@@ -28,6 +29,10 @@ public class ItemCell : MonoBehaviour
         {
             Game.SetActive(true);
         }
+        Btn.onClick.AddListener(() =>
+        {
+            Tips.instance.GetData(item);
+        });
     }
 
     public Item GetItem(int ID)

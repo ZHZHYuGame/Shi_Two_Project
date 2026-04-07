@@ -14,6 +14,14 @@ public class OnePanel : MonoBehaviour
     void Start()
     {
         MessageControll.Instance().AddListener(NetID.S_2_CGame,GetData);
+        AllGetBtn.onClick.AddListener(() =>
+        {
+            NetManager.Instance().SendNetMessage(NetID.S_2_CGetAllMail);
+        });
+        AllDelBtn.onClick.AddListener(() =>
+        {
+            NetManager.Instance().SendNetMessage(NetID.S_2_CDelAllMail);
+        });
     }
 
     private void GetData(object obj)
@@ -26,6 +34,17 @@ public class OnePanel : MonoBehaviour
         }
 
         UISX();
+        if (ThreePanel.Instance.Mail != null)
+        {
+            foreach (var item in list)
+            {
+                if (item.MailID == ThreePanel.Instance.Mail.MailID)
+                {
+                    ThreePanel.Instance.GetData(item);
+                    break;
+                }
+            }
+        }
     }
 
     private void UISX()
@@ -48,6 +67,10 @@ public class OnePanel : MonoBehaviour
         if (list.Count==0)
         {
             TwoPanel.gameObject.SetActive(true);
+        }
+        else
+        {
+            TwoPanel.gameObject.SetActive(false);
         }
         
         AllNum.text = list.Count + "/50";
