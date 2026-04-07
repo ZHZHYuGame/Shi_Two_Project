@@ -1,0 +1,17 @@
+C:\Users\Administrator\source\repos\ShiSan_Server\ShiSan_Server\bin\Debug\ShiSan_Server.exe.config
+C:\Users\Administrator\source\repos\ShiSan_Server\ShiSan_Server\bin\Debug\ShiSan_Server.exe
+C:\Users\Administrator\source\repos\ShiSan_Server\ShiSan_Server\bin\Debug\ShiSan_Server.pdb
+C:\Users\Administrator\source\repos\ShiSan_Server\ShiSan_Server\obj\Debug\ShiSan_Server.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\ShiSan_Server\ShiSan_Server\obj\Debug\ShiSan_Server.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\ShiSan_Server\ShiSan_Server\obj\Debug\ShiSan_Server.exe
+C:\Users\Administrator\source\repos\ShiSan_Server\ShiSan_Server\obj\Debug\ShiSan_Server.pdb
+C:\Users\ASUS\Downloads\ShiSan_Server (1)\ShiSan_Server\bin\Debug\ShiSan_Server.exe.config
+C:\Users\ASUS\Downloads\ShiSan_Server (1)\ShiSan_Server\bin\Debug\ShiSan_Server.exe
+C:\Users\ASUS\Downloads\ShiSan_Server (1)\ShiSan_Server\bin\Debug\ShiSan_Server.pdb
+C:\Users\ASUS\Downloads\ShiSan_Server (1)\ShiSan_Server\obj\Debug\ShiSan_Server.csproj.AssemblyReference.cache
+C:\Users\ASUS\Downloads\ShiSan_Server (1)\ShiSan_Server\obj\Debug\ShiSan_Server.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Downloads\ShiSan_Server (1)\ShiSan_Server\obj\Debug\ShiSan_Server.exe
+C:\Users\ASUS\Downloads\ShiSan_Server (1)\ShiSan_Server\obj\Debug\ShiSan_Server.pdb
+C:\Users\ASUS\Downloads\ShiSan_Server (1)\ShiSan_Server\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ASUS\Downloads\ShiSan_Server (1)\ShiSan_Server\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ASUS\Downloads\ShiSan_Server (1)\ShiSan_Server\obj\Debug\ShiSan_S.B0DE974B.Up2Date
