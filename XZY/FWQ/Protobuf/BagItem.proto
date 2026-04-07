@@ -1,0 +1,18 @@
+syntax="proto3";
+package Games;
+
+
+
+//背包数据
+message BagBaseData
+{
+         bool IsExist= 1;
+        int32 ItemID = 2;
+	int32 ItemNum= 3;
+}
+
+//返回当前所有的背包信息
+message S_To_C_Bag
+{
+    repeated BagBaseData bagData=1;
+}
